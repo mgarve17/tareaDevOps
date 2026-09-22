@@ -16,6 +16,7 @@ public class Main {
         
         
         boolean salir= false;
+        GestorTareas gestor = new GestorTareas();
         
         //menu repetititvo
         do{
@@ -30,13 +31,9 @@ public class Main {
             
             switch(opcion){
             
-                case 1 -> {
+                case 1 -> {//añadir nombre y desc de la tarea
                 
-                    System.out.println("Nombre de tarea: ");
-                    String nombreTarea = new Scanner(System.in).nextLine();
-                    
-                    System.out.println("Descripción: ");
-                    String descripcion = new Scanner(System.in).nextLine();
+                    gestor.crearTarea();
                 }
                 
                 case 2 -> {}

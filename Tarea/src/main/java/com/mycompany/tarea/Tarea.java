@@ -17,7 +17,7 @@ public class Tarea {
     public Tarea(String nombre, String desc) {
         this.nombre = nombre;
         this.desc = desc;
-        estado = false;
+        estado = false;//generar la tarea como no completada por defecto
     }
 
     public String getNombre() {
