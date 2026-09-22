@@ -10,6 +10,7 @@ package com.mycompany.tarea;
  */
 public class Tarea {
     
+    //private int id;
     private String nombre;
     private String desc;
     private boolean estado;

@@ -64,7 +64,7 @@ public class GestorTareas {
     }
 
     //devolver un listado de las tareas y su estado
-    public void listarTarea() {
+    public void listarTareas() {
 
         if (!listado.isEmpty()) {//comprbar que no esté vacía
             for (Tarea tarea : listado) {
@@ -81,15 +81,41 @@ public class GestorTareas {
     //marcar tarea como completada (cambiar boolean: false = sin terminar true= terminada)
     public void completarTarea(Tarea tarea) {
 
-        if (tarea.isEstado() == false) {
-            tarea.setEstado(true);
-
-            System.out.println("Tarea completada");
-        } else {
-
-            System.out.println("Esta tarea ya está completada");
+        if (!listado.isEmpty()) {
+            
+            Iterator<Tarea> iter = listado.iterator();
+            
+            while(iter.hasNext()){
+            
+                Tarea t = iter.next();
+                
+                if (t.getNombre().equals(tarea.getNombre())) {//si esta la tarea en la lista le cambia el estado
+                    
+                    t.setEstado(true);
+                }
+            }
         }
 
+    }
+    
+    public Tarea buscarTarea(String nombre){
+    
+        Tarea t = null;
+        if (!listado.isEmpty()) {//comprbar que no esté vacía
+            for (Tarea tarea : listado) {
+
+                if (tarea.getNombre().equals(nombre)) {
+                    
+                    t = tarea;
+                }
+                
+            }
+        } else {
+
+            System.out.println("No hay tareas");
+        }
+        
+        return t;
     }
 
 }
