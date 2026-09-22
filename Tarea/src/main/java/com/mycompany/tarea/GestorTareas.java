@@ -11,7 +11,7 @@ package com.mycompany.tarea;
 public class GestorTareas {
     
     
-    public static void crearTarea(){}
+    public static void crearTarea(String nombre, String desc){}
     
     public static void eliminarTarea(){}
     
