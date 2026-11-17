@@ -63,7 +63,7 @@ public class Carta {
 
     @Override
     public String toString() {
-        return nombre + ", " + numero + ", " + expansion;
+        return nombre + ", " + numero + ", " + expansion + ", "+codigo;
     }
     
     
